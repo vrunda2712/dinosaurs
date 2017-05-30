@@ -9,6 +9,7 @@ ANSWERS
 
 O/P: 331
 
+
 2. We want to open up our own version of Jurassic Park, but this time only with dinosaurs who are actually from the Jurassic period. Find all the dinosaurs from the Jurassic period.
 
 ----> SELECT name, period FROM dinos WHERE period='Jurassic';
@@ -47,11 +48,13 @@ O/P: Yuanmousaurus       | Jurassic
  Othnielia           | Jurassic
 (150 rows)
 
+
 3. Find the total sum length of all the dinosaurs from the Cretaceous period.
 
 ----> SELECT sum(length) FROM dinos WHERE period='Cretaceous';
 
 O/P:  1366.45
+
 
 4. Find all the dinosaurs from either the Jurassic OR Cretaceous periods, and order them by their species name alphabetically.
 
@@ -92,6 +95,7 @@ O/P: Abakensis        | Afrovenator             | Cretaceous
  Baharijensis     | Aegyptosaurus           | Cretaceous
  (510 rows)
 
+
 5. Find all the dinosaurs from the t_order Saurischia that are Herbivorous.
 
 ----> SELECT name, t_order, diet FROM dinos WHERE t_order='Saurischia' AND diet='Herbivorous';
@@ -121,17 +125,20 @@ O/P: Yuanmousaurus       | Saurischia | Herbivorous
  Nemegtosaurus       | Saurischia | Herbivorous
  (109 rows)
 
+
 6. Find the shortest dinosaur, and rename it Shortie.
 
 ----> UPDATE dinos SET name = 'Shortie' WHERE length = (SELECT min(name) FROM dinos0;
 
 O/P: UPDATE 1
 
+
 7. Find the alphabetically first dinosaur, so we can make sure they're present for class.
 
 ----> SELECT min(name) FROM dinos;
 
 O/P: Aardonyx
+
 
 8. Rename the five longest dinosaurs The Famous Five.
 
